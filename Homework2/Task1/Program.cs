@@ -10,12 +10,14 @@ int number = 0;
 
 //Получаем число и проверяем, является ли оно трехзначным
 
-while(isThreeDigit == false){
+while (isThreeDigit == false)
+{
     Console.Write("Please enter a three-digit number: ");
     number = int.Parse(Console.ReadLine()!);
     int check = number / 100;
 
-    if(check > 0 && check < 10){
+    if (check > 0 && check < 10)
+    {
         isThreeDigit = true;
     }
 }

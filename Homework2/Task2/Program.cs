@@ -8,9 +8,12 @@ int number = new Random().Next(0, 100000);
 //получаем число разрядов в числе
 int numberOfDigits = Convert.ToInt32(Math.Floor(Math.Log10(number) + 1));
 
-if(numberOfDigits < 3) {
+if (numberOfDigits < 3)
+{
     Console.WriteLine($"The number {number} has less than 3 digits.");
-} else {
+}
+else
+{
     //определяем, на что нужно поделить, чтобы получить трехзначное число
     int divider = Convert.ToInt32(Math.Pow(10, (numberOfDigits - 3)));
     int thirdDigit = number / divider % 10;
