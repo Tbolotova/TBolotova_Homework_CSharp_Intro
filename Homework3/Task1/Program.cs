@@ -3,12 +3,20 @@
 // 12821 -> да
 // 23432 -> да
 
-Console.Write("Please enter a 5-digit number: ");
+bool isFiveDigit = false;
+string number = null!;
 
+while (isFiveDigit == false)
+{
+    Console.Write("Please enter a 5-digit number: ");
+    number = Console.ReadLine()!;
+    if (number.Length == 5)
+    {
+        isFiveDigit = true;
+    }
+}
 
 //первый способ, через строки
-string number = Console.ReadLine()!;
-
 int length = number.Length;
 
 int count = length / 2;
@@ -36,12 +44,12 @@ else
     Console.WriteLine($"The number {number} is not a palindrome.");
 }
 
-//второй способ, через инты
+// //второй способ, через инты
 
-// int number = int.Parse(Console.ReadLine()!);
+// int numberInt = int.Parse(number);
 
 // //считаем количество цифр
-// int numberOfDigits = Convert.ToInt32(Math.Floor(Math.Log10(number) + 1));
+// int numberOfDigits = Convert.ToInt32(Math.Floor(Math.Log10(numberInt) + 1));
 
 // int count = numberOfDigits / 2;
 
@@ -49,10 +57,9 @@ else
 
 // for (int i = 0; i < count; i++)
 // {
-//     int currentCompareLeft = number / Convert.ToInt32(Math.Pow(10, numberOfDigits - i - 1)) % 10;
-//     Console.WriteLine(currentCompareLeft);
-//     int currentCompareRight = number / Convert.ToInt32(Math.Pow(10, i)) % 10;
-//     Console.WriteLine(currentCompareRight);
+//     //определяем цифры, которые должны совпасть на данной итерации цикла
+//     int currentCompareLeft = numberInt / Convert.ToInt32(Math.Pow(10, numberOfDigits - i - 1)) % 10;
+//     int currentCompareRight = numberInt / Convert.ToInt32(Math.Pow(10, i)) % 10;
 
 //     if(currentCompareLeft == currentCompareRight)
 //     {
