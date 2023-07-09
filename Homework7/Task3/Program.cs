@@ -7,8 +7,8 @@
 // Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
 // * Сумма всех цифр / их количество(это количество ваших строк)
 
-int rows = new Random().Next(0, 6);
-int columns = new Random().Next(0, 6);
+int rows = new Random().Next(2, 6);
+int columns = new Random().Next(2, 6);
 
 int[,] numbers = new int[rows, columns];
 
@@ -48,8 +48,7 @@ void PrintArray(int[,] arr){
 double[] averageByCol(int[,] arr){
     double[] averages = new double[arr.GetLength(1)];
     for (int i = 0; i < arr.GetLength(1); i++)
-    {
-        
+    {        
         int sum = 0;
         for (int j = 0; j < arr.GetLength(0); j++)
         {
