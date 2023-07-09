@@ -8,6 +8,8 @@
 // 9 5 3 2
 // 8 4 4 2
 
+// Мне кажется, я перемудрила и можно было решить проще. 
+
 int rows = new Random().Next(2, 6);
 int columns = new Random().Next(2, 6);
 
